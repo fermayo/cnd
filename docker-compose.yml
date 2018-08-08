@@ -1,0 +1,5 @@
+version: "3.4"
+services:
+  cnd:
+    image: okteto/daemon:latest
+    build: ./daemon

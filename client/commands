@@ -1,0 +1,14 @@
+rsync -avz -e "ssh -p 8022 -o StrictHostKeyChecking=no" ./ root@localhost:/src/
+
+maybe I need: apt-get install rsync on CND
+
+while inotifywait -r -e modify,create,delete /directory; do
+    sshpass -p screencast
+    rsync -avz /directory /target
+done
+
+kubectl port-forward deployment.apps/cnd :22
+
+kubectl exec cnd-6c885d8f9-x2j7h -i -t -- bash
+
+https://kubernetes.io/docs/tasks/administer-cluster/access-cluster-api
