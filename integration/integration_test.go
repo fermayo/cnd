@@ -342,6 +342,7 @@ func checkHealth(ctx context.Context, url string) error {
 	if err != nil {
 		return err
 	}
+	defer resp.Body.Close()
 
 	if resp.StatusCode != 200 {
 		return fmt.Errorf("bad status code from healthz %s: %d", endpoint, resp.StatusCode)
